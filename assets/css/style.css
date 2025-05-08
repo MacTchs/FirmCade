@@ -37,6 +37,7 @@ h1,h2,h3,h4,h5,h6 {
 	display: inline-block;
 	background-color: #242b3b;
 	color: #fff;
+	border-radius: 20px;
 	font-size: 13px;
 	font-weight: 500;
 	padding: 12px 20px;
@@ -81,7 +82,7 @@ h1,h2,h3,h4,h5,h6 {
 
 #preloader {
   overflow: hidden;
-  background: #f48840;
+  background: #26ADE5;
   left: 0;
   right: 0;
   top: 0;
@@ -470,7 +471,7 @@ header .navbar {
 }
 
 .blog-posts .down-content ul.post-info li a:hover {
-	color: #f48840;
+	color: #26ADEF;
 }
 
 .blog-posts .down-content p {
@@ -911,8 +912,9 @@ footer p a:hover {
 
 .contact-us .contact-form button {
 	display: inline-block;
-	background-color: #f48840;
+	background-color: #212529;
 	color: #fff;
+	border-radius: 20px;
 	font-size: 13px;
 	font-weight: 500;
 	padding: 12px 20px;
@@ -923,7 +925,7 @@ footer p a:hover {
 }
 
 .contact-us .contact-form button:hover {
-	background-color: #fb9857;
+	background-color: #31b3e7;
 }
 
 .contact-us .contact-information {
