@@ -536,6 +536,7 @@ ul.page-numbers {
 ul.page-numbers li {
 	display: inline-block;
 	margin: 0px 5px;
+	border-radius:20px
 }
 
 ul.page-numbers li a {
@@ -546,19 +547,22 @@ ul.page-numbers li a {
 	line-height: 50px;
 	font-size: 15px;
 	color: #7a7a7a;
-	border: 1px solid #eee;
+	border: 2px solid #262837;
+	border-radius:20px;
 	font-weight: 500;
 	transition: all 0.3s;
 }
 
 ul.page-numbers li.active a {
-	background-color: #f48840;
-	border-color: #f48840;
+	background-color: #262837;
+	border-color: #262837;
+	border: 2px solid #262837;
 	color: #fff;
+	border-radius:20px;
 }
 
 ul.page-numbers li a:hover {
-	color: #f48840;
+	color: #26ADEF;
 }
 
 .blog-posts .sidebar-heading h2 {
@@ -772,25 +776,28 @@ ul.page-numbers li a:hover {
 .sidebar .tags ul li {
 	margin-right: 6px;
 	display: inline-block;
+	color: #212529;
 }
 
 .sidebar .tags ul li {
 	margin-bottom: 10px;
+	color: #212529;
 }
 
 .sidebar .tags ul li a {
 	font-size: 15px;
-	font-weight: 500;
-	color: #aaa;
+	font-weight: 700;
+	color: #F5F5F5;
+	background-color: #212529;
 	display: inline-block;
-	border: 1px solid #eee;
+	border: 1px solid ;
+	border-radius: 20px;
 	padding: 10px 18px;
 	transition: all .3s;
 }
 
 .sidebar .tags ul li a:hover {
-	background-color: #232635;
-	border-color: #232635;
+	background-color: #26ADEF;
 	color: #fff;
 }
 
@@ -833,7 +840,7 @@ footer ul.social-icons li a {
 	font-size: 14px;
 	text-transform: uppercase;
 	color: #fff;
-	font-weight: 500;
+	font-weight: 800;
 	letter-spacing: 0.25px;
 	transition: all .3s;
 }
@@ -995,7 +1002,7 @@ footer p a:hover {
 }
 
 .about-us ul li a:hover {
-	background-color: #f48840;
+	background-color: #32B3EA;
 }
 
 
