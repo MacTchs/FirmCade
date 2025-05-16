@@ -79,7 +79,7 @@ https://templatemo.com/tm-551-stand-blog
             <div class="col-lg-12">
               <div class="text-content">
                 <h4>FirmCade
-                <h2>Tech News</h2>
+                <h2>Technology News</h2>
               </div>
             </div>
           </div>
@@ -293,6 +293,30 @@ https://templatemo.com/tm-551-stand-blog
                   <div class="sidebar-item search">
                     <form id="search_form" name="gs" method="GET" action="#">
                       <input type="text" name="q" class="searchText" placeholder="type to search..." autocomplete="on">
+                      <ul id="resultsContainer"></ul>
+
+<style>
+  .search-box {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+  #resultsContainer {
+    margin-top: 15px;
+    list-style: none;
+    padding: 0;
+  }
+  #resultsContainer li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+  #resultsContainer li a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #2a6df4;
+  }
+</style>
                     </form>
                   </div>
                 </div>
@@ -304,7 +328,11 @@ https://templatemo.com/tm-551-stand-blog
                     <div class="content">
                       <ul>
                         <li><a href="../../categories/tech/world-first-heart-transplant.html">
-                          <h5>META Updated Ray Ban Glasses</h5>
+                          <h5>Worlds First Robotic Heart Transplant</h5>
+                          <span>2025</span>
+                        </a></li>
+                        <li><a href="../../categories/tech/ray-ban-glasses.html">
+                          <h5>The Ray Ban Glasses</h5>
                           <span>2025</span>
                         </a></li>
                         <li><a href="../../categories/tech/quadruped-robots.html">
@@ -410,6 +438,44 @@ https://templatemo.com/tm-551-stand-blog
           }
       }
     </script>
+
+
+
+    <script>
+  let blogData = [];
+
+  // Load the search index JSON
+  fetch('.././search.json')
+    .then(response => response.json())
+    .then(data => blogData = data);
+
+  // Handle input
+  document.getElementById('searchBox').addEventListener('input', function () {
+    const searchTerm = this.value.toLowerCase();
+    const results = blogData.filter(item =>
+      item.title.toLowerCase().includes(searchTerm) ||
+      item.description.toLowerCase().includes(searchTerm)
+    );
+
+    const container = document.getElementById('resultsContainer');
+    container.innerHTML = '';
+
+    if (searchTerm && results.length === 0) {
+      container.innerHTML = '<li>No results found.</li>';
+    }
+
+    results.forEach(result => {
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <a href="${result.url}">${result.title}</a>
+        <p>${result.description}</p>
+      `;
+      container.appendChild(li);
+    });
+  });
+</script>
+
+
 
 
   </body>
