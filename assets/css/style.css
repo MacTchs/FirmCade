@@ -37,7 +37,6 @@ h1,h2,h3,h4,h5,h6 {
 	display: inline-block;
 	background-color: #242b3b;
 	color: #fff;
-	border-radius: 20px;
 	font-size: 13px;
 	font-weight: 500;
 	padding: 12px 20px;
@@ -324,7 +323,7 @@ header .navbar {
 }
 
 .owl-banner .item .item-content ul li a:hover {
-	color: #f48840;
+	color: #26ADEF;
 }
 
 .owl-banner .owl-nav {
